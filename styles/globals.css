@@ -1,26 +1,19 @@
-html,
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
 body {
-  padding: 0;
-  margin: 0;
-  font-family: -apple-system, BlinkMacSystemFont, Segoe UI, Roboto, Oxygen,
-    Ubuntu, Cantarell, Fira Sans, Droid Sans, Helvetica Neue, sans-serif;
+  @apply bg-gray-900 text-white;
 }
 
-a {
-  color: inherit;
-  text-decoration: none;
+.gradient {
+  width: 100%+48px; height: 100px+48px; border-radius: 2rem; background: radial-gradient(63.44% 82.03% at 55.58% -15.63%, #5ADDE6 0%, rgba(90, 221, 230, 0.26) 53.72%, rgba(90, 221, 230, 0) 100%), linear-gradient(26.62deg, rgba(249, 124, 89, 0.8) 20.64%, rgba(249, 124, 89, 0) 49.82%), linear-gradient(56.79deg, #B95BE6 33.79%, rgba(185, 91, 230, 0) 72.67%), linear-gradient(301.08deg, rgba(252, 178, 91, 0.91) 20.42%, rgba(252, 178, 91, 0) 60.38%), linear-gradient(141.57deg, rgba(78, 173, 235, 0.85) 19.08%, rgba(78, 173, 235, 0) 98.72%), #D3E4FF; background-blend-mode: normal, normal, darken, normal, normal, normal; filter: blur(48px);
 }
 
-* {
-  box-sizing: border-box;
+.card-shadow {
+  box-shadow: 0 0 0 1px #000, 0 30px 30px rgb(0 0 0 / 7%), 0 15px 15px rgb(0 0 0 / 6%), 0 10px 8px rgb(0 0 0 / 5%), 0 4px 4px rgb(0 0 0 / 4%), 0 2px 2px rgb(0 0 0 / 3%);
 }
 
-@media (prefers-color-scheme: dark) {
-  html {
-    color-scheme: dark;
-  }
-  body {
-    color: white;
-    background: black;
-  }
+.card {
+  @apply bg-gray-800/80 card-shadow rounded-2xl;
 }
